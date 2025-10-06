@@ -1,4 +1,5 @@
-import Logo from '/Users/amathziah/Downloads/portfolioP/src/images/mainlogo.jpeg';
+import Logo from '../images/mainlogo.jpeg'; // if Contact.jsx is in src/components/
+
 export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-[#0A0C18]">
