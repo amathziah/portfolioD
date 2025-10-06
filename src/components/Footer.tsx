@@ -2,10 +2,10 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaBehance } from 'react-icons/f
 
 export default function Footer() {
   const socialLinks = [
-    { icon: <FaFacebookF size={16} />, href: '#' },
-    { icon: <FaInstagram size={16} />, href: '#' },
-    { icon: <FaBehance size={16} />, href: '#' },
-    { icon: <FaLinkedinIn size={16} />, href: '#' },
+    { icon: <FaFacebookF size={16} />, href: 'https://www.facebook.com/profile.php?id=100042861791504' },
+    { icon: <FaInstagram size={16} />, href: 'https://www.instagram.com/direct/t/17842611860895998/' },
+    { icon: <FaBehance size={16} />, href: 'https://www.behance.net/sushilkumar485' },
+    { icon: <FaLinkedinIn size={16} />, href: 'https://www.linkedin.com/in/sushil-kumar-823328242/' },
   ];
 
   return (

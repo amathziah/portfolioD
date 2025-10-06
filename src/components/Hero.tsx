@@ -1,4 +1,18 @@
+import { useState, useEffect } from "react";
+
 export default function Hero() {
+
+  const [active, setActive] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+    setActive(id);
+    setIsMenuOpen(false);
+  };
+
+
   return (
     <section
       id="home"
@@ -30,7 +44,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="px-8 py-4 bg-[#E76F51] text-white rounded-full text-lg font-semibold italic hover:bg-[#d65f41] transition-colors flex items-center gap-3">
+            <button onClick={() => scrollToSection("projects")} className="px-8 py-4 bg-[#E76F51] text-white rounded-full text-lg font-semibold italic hover:bg-[#d65f41] transition-colors flex items-center gap-3">
               View My Portfolio
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                 <svg className="w-4 h-4 text-[#E76F51]" fill="currentColor" viewBox="0 0 24 24">

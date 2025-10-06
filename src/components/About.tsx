@@ -44,7 +44,7 @@ export default function About() {
 
         {/* Download CV Button */}
         <a
-          href="/Sushil_Kumar_CV.pdf"
+          href="https://in.docworkspace.com/d/sIMbG4uqpAqOY1cMG?sa=601.1037"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 px-8 py-4 bg-[#E76F51] hover:bg-[#d96443] text-white text-lg font-semibold rounded-full shadow-lg transition-colors"
