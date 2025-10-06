@@ -3,7 +3,7 @@ import React from "react";
 // ✅ Import images from src/images
 import uiuxImg from "../images/UID.png";
 import graphicImg from "../images/GD.png";
-import brandingImg from "../images/B.png";
+import brandingImg from "../images/b.png";
 
 export default function Services() {
   const services = [
