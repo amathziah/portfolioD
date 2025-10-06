@@ -1,25 +1,40 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // ✅ Import Link for navigation
+import { Link } from "react-router-dom";
+
+// ✅ Import all images from src/images
+import figmaImg from "../images/figma.png";
+import aiImg from "../images/Ai.png";
+import psImg from "../images/ps.png";
+import idImg from "../images/id.png";
+
+import brandingImg from "../images/b.png";
+import uiuxImg from "../images/foldy.png";
+import posterImg from "../images/pd.png";
+import conceptArtImg from "../images/ca.png";
+import photographyImg from "../images/photography.png";
+import infographicsImg from "../images/GD.png";
+import logoDesignImg from "../images/s.jpg";
+import packagingImg from "../images/packaging.png";
 
 export default function WorkAndProjects() {
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const tools = [
-    { name: 'Figma', img: '/src/images/figma.png', content: "95%" },
-    { name: 'Illustrator', img: '/src/images/Ai.png', content: "97%" },
-    { name: 'Photoshop', img: '/src/images/ps.png', content: "98%" },
-    { name: 'InDesign', img: '/src/images/id.png', content: "90%" },
+    { name: "Figma", img: figmaImg, content: "95%" },
+    { name: "Illustrator", img: aiImg, content: "97%" },
+    { name: "Photoshop", img: psImg, content: "98%" },
+    { name: "InDesign", img: idImg, content: "90%" },
   ];
 
   const allProjects = [
-    { name: 'Branding', img: '/src/images/b.png', path: '/projects/branding' },
-    { name: 'UI/UX Design', img: '/src/images/foldy.png', path: '/projects/uiux' },
-    { name: 'Poster Design', img: '/src/images/pd.png', path: '/projects/poster' },
-    { name: 'Concept Art', img: '/src/images/ca.png', path: '/projects/concept-art' },
-    { name: 'Photography', img: '/src/images/photography.png', path: '/projects/photography' },
-    { name: 'Infographics', img: '/src/images/GD.png', path: '/projects/infographics' },
-    { name: 'Logo Design', img: '/src/images/s.jpg', path: '/projects/logo-design' },
-    { name: 'Packaging', img: '/src/images/packaging.png', path: '/projects/packaging' },
+    { name: "Branding", img: brandingImg, path: "/projects/branding" },
+    { name: "UI/UX Design", img: uiuxImg, path: "/projects/uiux" },
+    { name: "Poster Design", img: posterImg, path: "/projects/poster" },
+    { name: "Concept Art", img: conceptArtImg, path: "/projects/concept-art" },
+    { name: "Photography", img: photographyImg, path: "/projects/photography" },
+    { name: "Infographics", img: infographicsImg, path: "/projects/infographics" },
+    { name: "Logo Design", img: logoDesignImg, path: "/projects/logo-design" },
+    { name: "Packaging", img: packagingImg, path: "/projects/packaging" },
   ];
 
   const displayedProjects = showAllProjects ? allProjects : allProjects.slice(0, 4);
@@ -79,7 +94,7 @@ export default function WorkAndProjects() {
             }`}
           >
             {displayedProjects.map((project, index) => (
-              <Link to={project.path} key={index}> {/* ✅ Wrap entire card in Link */}
+              <Link to={project.path} key={index}>
                 <div className="relative w-full aspect-[3/4] rounded-[32px] border-2 border-[#E76F51] overflow-visible hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                   {/* Project Name Header */}
                   <div className="absolute top-0 left-0 right-0 h-[80px] bg-[#0A0C18] rounded-t-[30px] border-b-2 border-[#E76F51] flex items-center justify-center z-10">
@@ -99,7 +114,7 @@ export default function WorkAndProjects() {
                     </div>
                   </div>
 
-                  {/* Arrow Button (kept for design, not needed for navigation) */}
+                  {/* Arrow Button */}
                   <div className="absolute -bottom-4 -right-4 z-20">
                     <div className="w-20 h-20 rounded-[32px] bg-[#0A0C18] border-2 border-[#E76F51] flex items-center justify-center">
                       <div className="w-14 h-14 rounded-full bg-[#E76F51] flex items-center justify-center hover:bg-[#d65f41] transition-colors">
@@ -139,4 +154,3 @@ export default function WorkAndProjects() {
     </div>
   );
 }
-

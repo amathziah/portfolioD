@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import profilePic from '../images/sushil1.png';
 
 export default function Hero() {
 
@@ -69,7 +70,7 @@ export default function Hero() {
             {/* Main profile circle */}
             <div className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-full border-8 border-[#E76F51] overflow-hidden bg-white">
               <img
-                src="/src/images/sushil1.png"
+                src={profilePic}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />

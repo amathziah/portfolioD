@@ -1,3 +1,5 @@
+
+import profileImg from '../images/sushilp1.png'; // adjust relative path
 export default function About() {
   return (
     <section
@@ -17,7 +19,7 @@ export default function About() {
         {/* Main profile image */}
         <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden shadow-2xl border-[6px] border-[#0b0b12] z-10">
           <img
-            src="src/images/sushilp1.png"
+            src={profileImg}
             alt="Sushil Kumar"
             className="w-full h-full object-cover object-center"
           />
