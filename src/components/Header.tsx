@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Logo from "../images/mainlogo.jpeg"; // make sure this path is correct
 
 export default function Header() {
   const [active, setActive] = useState("home");
@@ -38,13 +39,13 @@ export default function Header() {
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[1200px] h-[70px] z-50">
       <div className="absolute w-full h-full bg-white rounded-[35px] shadow-md flex items-center px-6 justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-[55px] h-[55px] bg-[#E76F51] rounded-full flex items-center justify-center">
-            <div className="w-2 h-2 bg-white rounded-full"></div>
-          </div>
-          <h1 className="font-redressed text-[50px] text-[#E76F51] leading-[60px]">
-            Sushil
-          </h1>
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="w-[220px] h-auto object-contain rounded-[60px] -ml-2"
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -100,7 +101,6 @@ export default function Header() {
     </header>
   );
 }
-
 
 
 
